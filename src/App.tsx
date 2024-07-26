@@ -1,24 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Table from './components/Table';
+import LightTable from "./components/LightTable";
+import Form from './components/Form';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="bg-gray-300">
+      <header>
+        <div className="justify-center flex">
+          <div className="text-5xl m-2">
+            Kafka Demo
+          </div>
+        </div>
       </header>
+      <div className="flex justify-center m-2">
+        <Form/>
+      </div>
+        <div className="flex flex-col md:flex-row justify-center m-2">
+            <div className="m-2 md:w-[40%]">
+                <Table/>
+            </div>
+
+            <div className="m-2 md:w-[30%]">
+                <LightTable/>
+            </div>
+
+        </div>
     </div>
   );
 }
